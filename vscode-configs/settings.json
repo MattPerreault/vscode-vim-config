@@ -1,0 +1,28 @@
+
+{
+   //vim settings
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.leader": "<space>",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+          "before": ["<leader>", "w"],
+          "commands": ["workbench.action.splitEditor"]
+        },
+        {
+          // Toggle file explorer on the left
+          "before": ["<leader>", "t"],
+          "commands": ["workbench.action.toggleSidebarVisibility"]
+        },
+        {
+          "before": ["<leader>", "f"],
+          "commands": [ "revealInExplorer" ],
+        },
+        {
+          "before": ["<leader>", "r", "f"],
+          "commands": [ "fileutils.renameFile" ]
+        }
+      ],
+      "redhat.telemetry.enabled": false
+}
