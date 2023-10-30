@@ -22,7 +22,7 @@ These are my Vim config files for VS Code
 
 ##### Move in Dependency Autosuggestions
 `ctl+k`: Move up \
-`ctc+j`: Move down
+`ctl+j`: Move down
 
 
 #### VS Code Settings
