@@ -24,6 +24,13 @@ These are my Vim config files for VS Code
 `ctl+k`: Move up \
 `ctc+j`: Move down
 
+
+#### VS Code Settings
+Show Relavite Line Numbers:
+- Go to settings `cmd+,`
+- Type "line numbers" in search bar
+- Under the "Text Editor" section in the drop down menu for "Editor: **Line Numbers** select "Relative"
+
 #### Sources
 
 Improved Vim setup in Visual Studio Code by Sebastian Hoitz:
