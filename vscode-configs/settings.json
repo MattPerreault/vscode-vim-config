@@ -1,28 +1,79 @@
-
 {
-   //vim settings
-    "vim.easymotion": true,
-    "vim.incsearch": true,
-    "vim.useSystemClipboard": true,
-    "vim.leader": "<space>",
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-          "before": ["<leader>", "w"],
-          "commands": ["workbench.action.splitEditor"]
-        },
-        {
-          // Toggle file explorer on the left
-          "before": ["<leader>", "t"],
-          "commands": ["workbench.action.toggleSidebarVisibility"]
-        },
-        {
-          "before": ["<leader>", "f"],
-          "commands": [ "revealInExplorer" ],
-        },
-        {
-          "before": ["<leader>", "r", "f"],
-          "commands": [ "fileutils.renameFile" ]
-        }
-      ],
-      "redhat.telemetry.enabled": false
+  "workbench.colorTheme": "Solarized Light",
+  "files.autoSave": "afterDelay",
+  "python.defaultInterpreterPath": "/usr/bin/python3",
+  "zenMode.hideLineNumbers": false,
+  "zenMode.hideTabs": false,
+
+
+  //vim settings
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.leader": "<space>",
+  "vim.normalModeKeyBindingsNonRecursive": [
+      //Split panes
+      {
+        // Split veritcally
+        "before": ["leader", "v"], "commands": [":vsplit"]
+      },
+      {
+        //Split horizontally
+        "before": ["leader", "s"], "commands": [":split"]
+      },
+      // Navigate panes
+      {
+        "before": ["leader", "h"],
+        "commands": ["workbench.action.focusLeftGroup"]
+      },
+      {
+        "before": ["leader", "l"],
+        "commands": ["workbench.action.focusRightGroup"]
+      },
+      {
+        "before": ["leader", "j"],
+        "commands": ["workbench.action.focusBelowGroup"]
+      },
+      {
+        "before": ["leader", "k"],
+        "commands": ["workbench.action.focusAboveGroup"]
+      },
+      // Toggle file explorer on the left
+      {
+        "before": ["<leader>", "t"],
+        // "commands": ["workbench.action.toggleSidebarVisibility"]
+        "commands": ["workbench.explorer.fileView.focus"]
+      },
+      {
+        "before": ["<leader>", "f"],
+        "commands": [ "revealInExplorer" ]
+      },
+      //Navigate between buffers (tabs)
+      {
+        "before": ["<S-h>"],
+        "commands": [":bprevious"]
+      },
+      {
+        "before": ["<S-l>"],
+        "commands": [":bnext"]
+      },
+      //Nice to have
+      {"before": ["leader", "W"], "commands": [":w!"]},
+      {"before": ["leader", "q"], "commands": [":q!"]},
+      {"before": ["leader", "x"], "commands": [":x!"]},
+      {"before": ["leader", "f"], "commands": ["workbench.action.quickOpen"]},
+      {"before": ["leader", "p"], "commands": ["editor.action.formatDocument"]}
+    ],
+    "vim.visualModeKeyBindings": [
+      //Stay in visual mode while indenting
+      {"before": ["<"], "commands": ["editor.action.outdentLines"]},
+      {"before": [">"], "commands": ["editor.action.indentLines"]},
+      //Move selected lines while staying in visual mode
+      {"before": ["J"], "commands": ["editor.action.moveLinesDownAction"]},
+      {"before": ["K"], "commands": ["editor.action.moveLinesUpAction"]}
+    ],
+    "redhat.telemetry.enabled": false,
+    "editor.lineNumbers": "relative",
+    "editor.minimap.enabled": false,
+    "workbench.iconTheme": "material-icon-theme"
 }
