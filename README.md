@@ -5,16 +5,16 @@ These are my Vim config files for VS Code
 
 #### Normal Mode
 ##### Window Management
-`space+w`: Split window right \
-`ctl+h`: Focus left window \
-`ctl+l`: Focus right window \
-`ctl+k`: Focus above window \
-`ctl+j`: Focus lower window
+`space+v`: Split window right \
+`space+s`: Split window down \
+`space+h`: Focus left window \
+`space+l`: Focus right window \
+`space+k`: Focus above window \
+`space+j`: Focus lower window
 
 ##### File Explorer Management
 `space+t`:  Open the file explorer \
-`,t`: Close the explorer and move back into window \
-`space+f`: Find in explorer \
+`ctl-e`: Close the explorer and move back into window \
 `ctl-h`: collapse directory \
 `ctl-l`: expand directory \
 `ctl-enter`: rename file
